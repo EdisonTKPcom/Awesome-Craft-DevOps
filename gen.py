@@ -10,7 +10,42 @@ S = {
 }
 LICNAME = {"NOASSERTION": "Custom", "none": "None"}
 AS = "2026-11-15"
-ACTIVE_SINCE = "2026-10-15"
+ACTIVE_SINCE = "2026-10-16"
+
+RELATED_TSV = Path('/workspace/repos/_build/related.tsv')
+
+def display_name(repo_name):
+    return 'Awesome Craft' if repo_name == 'Awesome-Craft' else repo_name.replace('-', ' ')
+
+def load_related():
+    rows = []
+    if RELATED_TSV.exists():
+        for line in RELATED_TSV.read_text().splitlines():
+            if not line.strip() or line.startswith('#'):
+                continue
+            name, desc = line.split('\t', 1)
+            rows.append((name.strip(), desc.strip()))
+    return rows
+
+def related_section(self_name):
+    rows = [(n, d) for n, d in load_related() if n != self_name]
+    main = [r for r in rows if r[0] == 'Awesome-Craft']
+    rest = sorted([r for r in rows if r[0] != 'Awesome-Craft'], key=lambda x: x[0].lower())
+    lines = ['## Related lists', '', 'Other lists in the Awesome Craft series:', '']
+    for name, desc in main + rest:
+        if not desc.endswith('.'):
+            desc += '.'
+        lines.append(f'- [{display_name(name)}](https://github.com/EdisonTKPcom/{name}) - {desc}')
+    lines.append('')
+    return '\n'.join(lines)
+
+def star_history_section(repo_name):
+    return (
+        '## Star history\n\n'
+        f'[![Star History Chart](https://api.star-history.com/chart?repos=EdisonTKPcom/{repo_name}&amp;type=Date)]'
+        f'(https://www.star-history.com/#EdisonTKPcom/{repo_name}&Date)\n'
+    )
+
 
 C = [
     (
@@ -169,12 +204,11 @@ o.append(
 
 Paid PaaS, observability and CI bills add up fast. Every project here can be self-hosted, and each entry names the paid tool it replaces. Check each project's licence before you host or resell it for clients.
 
-Related list: [Awesome Craft](https://github.com/EdisonTKPcom/Awesome-Craft), open-source alternatives to popular SaaS tools.
-
 ## Contents
 """
 )
 o += ["- [Dashboard](#dashboard)"] + [f"- [{n}](#{anchor(n)})" for n, _ in C]
+o += ["- [Related lists](#related-lists)", "- [Star history](#star-history)"]
 o.append("\n## Dashboard\n")
 o.append(
     f"""<table>
@@ -188,7 +222,9 @@ o.append(
 </tr>
 </table>
 
-Stats snapshot taken on {AS} from the GitHub API. Star badges next to each entry update live.
+**FACT** (snapshot taken {AS}, GitHub API): {len(tools)} listed projects, all of them on GitHub with public repository statistics.
+
+**ESTIMATE**: {k(tot)} combined GitHub stars and {k(forks)} combined forks, summed from those API counts on the snapshot date. Live star badges next to each entry may differ.
 """
 )
 top = sorted(tools, key=lambda t: -S[t[1]]["stars"])[:10]
@@ -227,6 +263,8 @@ for n, ts in C:
             f"- [{t[0]}](https://github.com/{t[1]}) - {t[3][:-1]}, an alternative to {alt(t[2])}. ![Stars](https://img.shields.io/github/stars/{t[1]}?style=flat-square&label=%E2%AD%90)"
         )
     o.append("")
+o.append(related_section("Awesome-Craft-DevOps"))
+o.append(star_history_section("Awesome-Craft-DevOps"))
 o.append(
     "## Contributing\n\nContributions welcome! Read the [contribution guidelines](contributing.md) first.\n\n"
     '<div align="center">\n\n'

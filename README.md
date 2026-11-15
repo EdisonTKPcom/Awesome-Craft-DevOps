@@ -16,8 +16,6 @@
 
 Paid PaaS, observability and CI bills add up fast. Every project here can be self-hosted, and each entry names the paid tool it replaces. Check each project's licence before you host or resell it for clients.
 
-Related list: [Awesome Craft](https://github.com/EdisonTKPcom/Awesome-Craft), open-source alternatives to popular SaaS tools.
-
 ## Contents
 
 - [Dashboard](#dashboard)
@@ -33,6 +31,8 @@ Related list: [Awesome Craft](https://github.com/EdisonTKPcom/Awesome-Craft), op
 - [Feature Flags](#feature-flags)
 - [Tunnels and Networking](#tunnels-and-networking)
 - [Workflow Orchestration](#workflow-orchestration)
+- [Related lists](#related-lists)
+- [Star history](#star-history)
 
 ## Dashboard
 
@@ -47,7 +47,9 @@ Related list: [Awesome Craft](https://github.com/EdisonTKPcom/Awesome-Craft), op
 </tr>
 </table>
 
-Stats snapshot taken on 2026-11-15 from the GitHub API. Star badges next to each entry update live.
+**FACT** (snapshot taken 2026-11-15, GitHub API): 40 listed projects, all of them on GitHub with public repository statistics.
+
+**ESTIMATE**: 1.48M combined GitHub stars and 193.7k combined forks, summed from those API counts on the snapshot date. Live star badges next to each entry may differ.
 
 ### 🏆 Leaderboard
 
@@ -166,6 +168,28 @@ pie showData
 
 - [Apache Airflow](https://github.com/apache/airflow) - Platform to author, schedule and monitor data pipelines as DAGs, an alternative to Astronomer and Amazon MWAA. ![Stars](https://img.shields.io/github/stars/apache/airflow?style=flat-square&label=%E2%AD%90)
 - [Kestra](https://github.com/kestra-io/kestra) - Orchestration for scheduled and event-driven workflows, defined in YAML, an alternative to Prefect and Airflow Cloud. ![Stars](https://img.shields.io/github/stars/kestra-io/kestra?style=flat-square&label=%E2%AD%90)
+
+## Related lists
+
+Other lists in the Awesome Craft series:
+
+- [Awesome Craft](https://github.com/EdisonTKPcom/Awesome-Craft) - A curated list of open-source, self-hostable alternatives to popular SaaS tools.
+- [Awesome Craft Agents](https://github.com/EdisonTKPcom/Awesome-Craft-Agents) - A curated list of open-source chat apps, coding agents, self-hosted agent bots, workflow automation and image-generation UIs.
+- [Awesome Craft AI](https://github.com/EdisonTKPcom/Awesome-Craft-AI) - A curated list of open-source, self-hostable AI runtimes, servers, Hugging Face libraries and related infrastructure.
+- [Awesome Craft BSC](https://github.com/EdisonTKPcom/Awesome-Craft-BSC) - A curated list of verified open-source clients, SDKs, dev tools and protocol code for BNB Smart Chain and opBNB.
+- [Awesome Craft CUDA](https://github.com/EdisonTKPcom/Awesome-Craft-CUDA) - A curated list of open-source CUDA learning material, kernel libraries, tooling and portability projects.
+- [Awesome Craft DeepSeek](https://github.com/EdisonTKPcom/Awesome-Craft-DeepSeek) - A curated list of official DeepSeek repositories and open-source harnesses, serving engines, eval tools and fine-tuning stacks that work with DeepSeek models.
+- [Awesome Craft Ethereum](https://github.com/EdisonTKPcom/Awesome-Craft-Ethereum) - A curated list of verified open-source Ethereum clients, SDKs, dev frameworks, wallets and security tools.
+- [Awesome Craft EV](https://github.com/EdisonTKPcom/Awesome-Craft-EV) - A curated list of open-source software and hardware for electric vehicles and charging.
+- [Awesome Craft Hardware](https://github.com/EdisonTKPcom/Awesome-Craft-Hardware) - A curated list of open-source tools for PCB, FPGA, ASIC and chip design.
+- [Awesome Craft Hyperliquid](https://github.com/EdisonTKPcom/Awesome-Craft-Hyperliquid) - A curated list of verified open-source SDKs, node tools, analytics and community libraries for the Hyperliquid ecosystem.
+- [Awesome Craft Malaysia](https://github.com/EdisonTKPcom/Awesome-Craft-Malaysia) - A curated list of open-source tools useful to Malaysian SMEs, with verified MyInvois support called out separately.
+- [Awesome Craft Solana](https://github.com/EdisonTKPcom/Awesome-Craft-Solana) - A curated list of verified open-source Solana clients, SDKs, frameworks, explorers and program libraries.
+- [Awesome Craft Web3](https://github.com/EdisonTKPcom/Awesome-Craft-Web3) - A curated list of open-source DEX protocol code, self-custody software, indexers, frameworks and Blockchain infrastructure.
+
+## Star history
+
+[![Star History Chart](https://api.star-history.com/chart?repos=EdisonTKPcom/Awesome-Craft-DevOps&amp;type=Date)](https://www.star-history.com/#EdisonTKPcom/Awesome-Craft-DevOps&Date)
 
 ## Contributing
 
