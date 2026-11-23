@@ -123,6 +123,7 @@ pie showData
 
 - [Gatus](https://github.com/TwiN/gatus) - Automated health checks and status pages, configured as code, an alternative to Pingdom and Statuspage. ![Stars](https://img.shields.io/github/stars/TwiN/gatus?style=flat-square&label=%E2%AD%90)
 - [Healthchecks](https://github.com/healthchecks/healthchecks) - Cron job and heartbeat monitoring, with alerts when jobs fail to check in, an alternative to Cronitor and Dead Man's Snitch. ![Stars](https://img.shields.io/github/stars/healthchecks/healthchecks?style=flat-square&label=%E2%AD%90)
+- [SiteWatcher](https://github.com/NikKurkov/sitewatcher) - Self-hosted uptime and TLS expiry monitoring with public status pages, an alternative to Pingdom. ![Stars](https://img.shields.io/github/stars/NikKurkov/sitewatcher?style=flat-square&label=%E2%AD%90)
 - [Uptime Kuma](https://github.com/louislam/uptime-kuma) - Self-hosted monitoring with a polished UI, alerts and status pages, an alternative to Pingdom, UptimeRobot and Statuspage. ![Stars](https://img.shields.io/github/stars/louislam/uptime-kuma?style=flat-square&label=%E2%AD%90)
 
 ## CI, CD and Git
